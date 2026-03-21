@@ -48,6 +48,7 @@
     "tsconfig.json"
   ],
   "scripts": {
+    "prepare": "npm run build",
     "build": "tsup && node scripts/copy-assets.mjs",
     "clean": "rm -rf dist",
     "lint": "eslint .",
@@ -67,6 +68,10 @@
   },
   "overrides": {
     "esbuild": "0.27.4"
+  },
+  "dependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.6.14",
@@ -95,8 +100,6 @@
     "react-dom": "^18.3.1",
     "storybook": "^8.6.18",
     "ts-jest": "^29.4.6",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2",
     "vite": "^5.4.21"
   }
 }
