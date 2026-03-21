@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stats variant counter-row matches snapshot 1`] = `
+<section
+  class="stats stats--counter-row"
+  data-max-width="wide"
+  data-variant="counter-row"
+>
+  <div
+    class="stats_inner"
+  >
+    <ul
+      class="stats_list"
+    >
+      <li
+        class="stats_item"
+      >
+        <div
+          class="stats_values"
+        >
+          <span
+            class="stats_value"
+          >
+            <span
+              data-content-path="content.items[0].value"
+            >
+              V
+            </span>
+          </span>
+          <span
+            class="stats_label"
+            data-content-path="content.items[0].label"
+          >
+            L
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`Stats variant featured matches snapshot 1`] = `
+<section
+  class="stats stats--featured"
+  data-max-width="wide"
+  data-variant="featured"
+>
+  <div
+    class="stats_inner"
+  >
+    <ul
+      class="stats_list"
+    >
+      <li
+        class="stats_item"
+      >
+        <div
+          class="stats_values"
+        >
+          <span
+            class="stats_value"
+          >
+            <span
+              data-content-path="content.items[0].value"
+            >
+              V
+            </span>
+          </span>
+          <span
+            class="stats_label"
+            data-content-path="content.items[0].label"
+          >
+            L
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`Stats variant with-icons matches snapshot 1`] = `
+<section
+  class="stats stats--with-icons"
+  data-max-width="wide"
+  data-variant="with-icons"
+>
+  <div
+    class="stats_inner"
+  >
+    <ul
+      class="stats_list"
+    >
+      <li
+        class="stats_item"
+      >
+        <span
+          aria-hidden="true"
+          class="stats_icon"
+        />
+        <div
+          class="stats_values"
+        >
+          <span
+            class="stats_value"
+          >
+            <span
+              data-content-path="content.items[0].value"
+            >
+              V
+            </span>
+          </span>
+          <span
+            class="stats_label"
+            data-content-path="content.items[0].label"
+          >
+            L
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+`;

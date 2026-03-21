@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FAQAccordion variant grouped matches snapshot 1`] = `
+<section
+  class="faqAccordion faqAccordion--grouped"
+  data-max-width="wide"
+  data-variant="grouped"
+>
+  <div
+    class="faqAccordion_inner"
+  >
+    <div
+      class="faqAccordion_groups"
+    >
+      <section
+        class="faqAccordion_group"
+      >
+        <h3
+          class="faqAccordion_groupTitle"
+          data-content-path="content.groups[0].title"
+        >
+          G
+        </h3>
+        <details
+          class="faqAccordion_details"
+        >
+          <summary
+            class="faqAccordion_summary"
+            data-content-path="content.groups[0].items[0].question"
+          >
+            Q
+          </summary>
+          <div
+            class="faqAccordion_answer"
+            data-content-path="content.groups[0].items[0].answer"
+          >
+            A
+          </div>
+        </details>
+      </section>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`FAQAccordion variant simple matches snapshot 1`] = `
+<section
+  class="faqAccordion faqAccordion--simple"
+  data-max-width="wide"
+  data-variant="simple"
+>
+  <div
+    class="faqAccordion_inner"
+  >
+    <div
+      class="faqAccordion_list"
+    >
+      <details
+        class="faqAccordion_details"
+      >
+        <summary
+          class="faqAccordion_summary"
+          data-content-path="content.faqs[0].question"
+        >
+          Q
+        </summary>
+        <div
+          class="faqAccordion_answer"
+          data-content-path="content.faqs[0].answer"
+        >
+          A
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+`;

@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CTABanner variant full-width matches snapshot 1`] = `
+<section
+  class="ctaBanner ctaBanner--full-width"
+  data-bg="accent"
+  data-variant="full-width"
+>
+  <div
+    class="ctaBanner_inner"
+  >
+    <div
+      class="ctaBanner_text"
+    >
+      <h2
+        class="ctaBanner_heading"
+        data-content-path="content.heading"
+      >
+        Snap
+      </h2>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`CTABanner variant inline matches snapshot 1`] = `
+<section
+  class="ctaBanner ctaBanner--inline"
+  data-bg="accent"
+  data-variant="inline"
+>
+  <div
+    class="ctaBanner_inner"
+  >
+    <div
+      class="ctaBanner_text"
+    >
+      <h2
+        class="ctaBanner_heading"
+        data-content-path="content.heading"
+      >
+        Snap
+      </h2>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`CTABanner variant with-image matches snapshot 1`] = `
+<section
+  class="ctaBanner ctaBanner--with-image"
+  data-bg="accent"
+  data-variant="with-image"
+>
+  <div
+    class="ctaBanner_inner"
+  >
+    <div
+      class="ctaBanner_text"
+    >
+      <h2
+        class="ctaBanner_heading"
+        data-content-path="content.heading"
+      >
+        Snap
+      </h2>
+    </div>
+    <div
+      aria-hidden="true"
+      class="ctaBanner_visual"
+    />
+  </div>
+</section>
+`;

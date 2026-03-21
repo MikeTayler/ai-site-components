@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testimonials variant cards matches snapshot 1`] = `
+<section
+  class="testimonials testimonials--cards"
+  data-max-width="wide"
+  data-variant="cards"
+>
+  <div
+    class="testimonials_inner"
+  >
+    <ul
+      class="testimonials_list"
+    >
+      <li
+        class="testimonials_card"
+      >
+        <blockquote
+          class="testimonials_quote"
+          data-content-path="content.items[0].quote"
+        >
+          Q
+        </blockquote>
+        <cite
+          class="testimonials_cite"
+        >
+          <span
+            class="testimonials_author"
+            data-content-path="content.items[0].author"
+          >
+            A
+          </span>
+        </cite>
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`Testimonials variant carousel matches snapshot 1`] = `
+<section
+  class="testimonials testimonials--carousel"
+  data-max-width="wide"
+  data-variant="carousel"
+>
+  <div
+    class="testimonials_inner"
+  >
+    <ul
+      class="testimonials_list testimonials_list--carousel"
+    >
+      <li
+        class="testimonials_card"
+      >
+        <blockquote
+          class="testimonials_quote"
+          data-content-path="content.items[0].quote"
+        >
+          Q
+        </blockquote>
+        <cite
+          class="testimonials_cite"
+        >
+          <span
+            class="testimonials_author"
+            data-content-path="content.items[0].author"
+          >
+            A
+          </span>
+        </cite>
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`Testimonials variant featured matches snapshot 1`] = `
+<section
+  class="testimonials testimonials--featured"
+  data-max-width="wide"
+  data-variant="featured"
+>
+  <div
+    class="testimonials_inner"
+  >
+    <ul
+      class="testimonials_list testimonials_list--featured"
+    >
+      <li
+        class="testimonials_card testimonials_card--featured"
+      >
+        <blockquote
+          class="testimonials_quote"
+          data-content-path="content.items[0].quote"
+        >
+          Q
+        </blockquote>
+        <cite
+          class="testimonials_cite"
+        >
+          <span
+            class="testimonials_author"
+            data-content-path="content.items[0].author"
+          >
+            A
+          </span>
+        </cite>
+      </li>
+    </ul>
+  </div>
+</section>
+`;

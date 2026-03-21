@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextContent variant single-column matches snapshot 1`] = `
+<section
+  class="textContent textContent--single-column"
+  data-max-width="wide"
+  data-variant="single-column"
+>
+  <div
+    class="textContent_inner"
+  >
+    <div
+      class="textContent_main"
+    >
+      <p
+        class="textContent_para"
+        data-content-path="content.paragraphs[0]"
+      >
+        Snap
+      </p>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`TextContent variant two-column matches snapshot 1`] = `
+<section
+  class="textContent textContent--two-column"
+  data-max-width="wide"
+  data-variant="two-column"
+>
+  <div
+    class="textContent_inner"
+  >
+    <div
+      class="textContent_main"
+    >
+      <p
+        class="textContent_para"
+        data-content-path="content.paragraphs[0]"
+      >
+        A
+      </p>
+      <p
+        class="textContent_para"
+        data-content-path="content.paragraphs[1]"
+      >
+        B
+      </p>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`TextContent variant with-sidebar matches snapshot 1`] = `
+<section
+  class="textContent textContent--with-sidebar"
+  data-max-width="wide"
+  data-variant="with-sidebar"
+>
+  <div
+    class="textContent_inner"
+  >
+    <div
+      class="textContent_main"
+    >
+      <p
+        class="textContent_para"
+        data-content-path="content.paragraphs[0]"
+      >
+        Main
+      </p>
+    </div>
+    <aside
+      aria-label="Sidebar"
+      class="textContent_aside"
+    >
+      <h3
+        class="textContent_asideTitle"
+        data-content-path="content.asideTitle"
+      >
+        Side
+      </h3>
+      <p
+        class="textContent_para"
+        data-content-path="content.asideParagraphs[0]"
+      >
+        Aside
+      </p>
+    </aside>
+  </div>
+</section>
+`;

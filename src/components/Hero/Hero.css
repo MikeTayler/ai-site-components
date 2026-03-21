@@ -1,0 +1,189 @@
+/**
+ * Hero — layout only. Colours, type, spacing, and radii come from theme tokens (CSS variables).
+ */
+
+.hero {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: var(--font-body);
+  color: var(--color-text);
+}
+
+.hero_inner {
+  box-sizing: border-box;
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* maxWidth settings */
+.hero_inner[data-max-width="narrow"] {
+  max-width: 42rem;
+}
+
+.hero_inner[data-max-width="wide"] {
+  max-width: 72rem;
+}
+
+.hero_inner[data-max-width="full"] {
+  max-width: none;
+}
+
+/* spacing (vertical padding) */
+.hero[data-spacing="compact"] {
+  padding-block: var(--space-lg);
+  padding-inline: var(--space-md);
+}
+
+.hero[data-spacing="normal"] {
+  padding-block: var(--space-xl);
+  padding-inline: var(--space-md);
+}
+
+.hero[data-spacing="relaxed"] {
+  padding-block: var(--space-2xl);
+  padding-inline: var(--space-lg);
+}
+
+/* background presets */
+.hero[data-bg="primary"] {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.hero[data-bg="neutral"] {
+  background-color: var(--color-neutral);
+  color: var(--color-text);
+}
+
+.hero[data-bg="background"] {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.hero[data-bg="accent"] {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+}
+
+.hero_heading {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-heading);
+  font-size: calc(
+    var(--font-size-base) * var(--type-scale) * var(--type-scale) * var(--type-scale)
+  );
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.hero_subheading {
+  margin: 0 0 var(--space-md);
+  font-size: calc(var(--font-size-base) * var(--type-scale));
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+.hero[data-bg="primary"] .hero_subheading,
+.hero[data-bg="accent"] .hero_subheading {
+  color: var(--color-background);
+  opacity: 0.88;
+}
+
+.hero_cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  border: none;
+  cursor: pointer;
+}
+
+.hero[data-bg="accent"] .hero_cta {
+  background-color: var(--color-background);
+  color: var(--color-accent);
+}
+
+.hero_cta:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* centered */
+.hero_centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero_centered .hero_subheading {
+  max-width: 40rem;
+}
+
+/* split & video (two-column on wide viewports) */
+.hero_inner.hero_split {
+  display: grid;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+@media (min-width: 48rem) {
+  .hero_inner.hero_split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    text-align: left;
+  }
+
+  .hero_inner.hero_split .hero_text {
+    text-align: left;
+  }
+}
+
+.hero_visual {
+  min-height: 12rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-neutral);
+  box-shadow: inset 0 0 0 1px var(--color-text-light);
+}
+
+.hero[data-bg="primary"] .hero_visual,
+.hero[data-bg="accent"] .hero_visual {
+  background-color: var(--color-secondary);
+  box-shadow: inset 0 0 0 1px var(--color-background);
+}
+
+/* full-bleed — pair with .hero_centered on the same element */
+.hero_fullBleed {
+  min-height: min(70vh, 40rem);
+  justify-content: center;
+}
+
+/* video */
+.hero_videoWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-neutral);
+}
+
+.hero_videoFrame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.hero_video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

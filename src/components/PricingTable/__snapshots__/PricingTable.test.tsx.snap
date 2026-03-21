@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PricingTable variant comparison matches snapshot 1`] = `
+<section
+  class="pricingTable pricingTable--comparison"
+  data-max-width="wide"
+  data-variant="comparison"
+>
+  <div
+    class="pricingTable_inner"
+  >
+    <div
+      class="pricingTable_compareWrap"
+    >
+      <table
+        class="pricingTable_table"
+      >
+        <thead>
+          <tr>
+            <th
+              class="pricingTable_th"
+              scope="col"
+            >
+              Feature
+            </th>
+            <th
+              class="pricingTable_th"
+              scope="col"
+            >
+              <span
+                data-content-path="content.tiers[0].name"
+              >
+                A
+              </span>
+            </th>
+            <th
+              class="pricingTable_th"
+              scope="col"
+            >
+              <span
+                data-content-path="content.tiers[1].name"
+              >
+                B
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              class="pricingTable_td"
+            >
+              f
+            </td>
+            <td
+              class="pricingTable_td"
+            >
+              ✓
+            </td>
+            <td
+              class="pricingTable_td"
+            >
+              ✓
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`PricingTable variant simple matches snapshot 1`] = `
+<section
+  class="pricingTable pricingTable--simple"
+  data-max-width="wide"
+  data-variant="simple"
+>
+  <div
+    class="pricingTable_inner"
+  >
+    <ul
+      class="pricingTable_tiers"
+    >
+      <li
+        class="pricingTable_tier"
+      >
+        <h3
+          class="pricingTable_tierName"
+          data-content-path="content.tiers[0].name"
+        >
+          Snap
+        </h3>
+        <p
+          class="pricingTable_price"
+        >
+           
+          <span
+            data-content-path="content.tiers[0].price"
+          >
+            0
+          </span>
+        </p>
+        <ul
+          class="pricingTable_features"
+        >
+          <li
+            data-content-path="content.tiers[0].features[0]"
+          >
+            a
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`PricingTable variant tier-cards matches snapshot 1`] = `
+<section
+  class="pricingTable pricingTable--tier-cards"
+  data-max-width="wide"
+  data-variant="tier-cards"
+>
+  <div
+    class="pricingTable_inner"
+  >
+    <ul
+      class="pricingTable_tiers"
+    >
+      <li
+        class="pricingTable_tier"
+      >
+        <h3
+          class="pricingTable_tierName"
+          data-content-path="content.tiers[0].name"
+        >
+          Snap
+        </h3>
+        <p
+          class="pricingTable_price"
+        >
+           
+          <span
+            data-content-path="content.tiers[0].price"
+          >
+            0
+          </span>
+        </p>
+        <ul
+          class="pricingTable_features"
+        >
+          <li
+            data-content-path="content.tiers[0].features[0]"
+          >
+            a
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+`;

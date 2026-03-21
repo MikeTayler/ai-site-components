@@ -1,0 +1,92 @@
+/**
+ * AI Site — design tokens (CSS custom properties)
+ *
+ * Import once in your app shell (e.g. layout or _app):
+ *   import "@ai-site/components/tokens.css";
+ *
+ * ThemeProvider injects the same variables on its wrapper, overriding :root for that subtree.
+ * Components must use these variables only — never hard-coded colours, fonts, radii, or spacing.
+ *
+ * Default :root values match defaultBrandConfig in defaultBrand.ts.
+ */
+
+:root {
+  /* -------------------------------------------------------------------------
+   * Colour — brand palette (hex or any valid CSS colour)
+   * ------------------------------------------------------------------------- */
+
+  /** Primary brand colour — buttons, key accents, links */
+  --color-primary: #2d2d2d;
+
+  /** Secondary brand colour — secondary actions, muted emphasis */
+  --color-secondary: #6b6b6b;
+
+  /** Accent — highlights, badges, focus rings */
+  --color-accent: #4a6741;
+
+  /** Neutral surfaces — cards, bands, subtle backgrounds */
+  --color-neutral: #f5f0eb;
+
+  /** Page / section background */
+  --color-background: #ffffff;
+
+  /** Primary body text */
+  --color-text: #2d2d2d;
+
+  /** Secondary / supporting text — captions, meta, placeholders */
+  --color-text-light: #6b6b6b;
+
+  /* -------------------------------------------------------------------------
+   * Typography — font stacks and scale (from BrandConfig.typography)
+   * ------------------------------------------------------------------------- */
+
+  /** Headings (h1–h6, display titles) — comma-separated font list */
+  --font-heading: system-ui, sans-serif;
+
+  /** Body copy, UI labels, paragraphs */
+  --font-body: system-ui, sans-serif;
+
+  /** Root font size in px — use with calc() for modular scale */
+  --font-size-base: 16px;
+
+  /**
+   * Modular scale multiplier (e.g. 1.25) — use in calc(var(--font-size-base) * pow(var(--type-scale), n))
+   * or with your own heading steps in components.
+   */
+  --type-scale: 1.25;
+
+  /* -------------------------------------------------------------------------
+   * Border radius — three steps (from BrandConfig.borderRadius preset)
+   * ------------------------------------------------------------------------- */
+
+  /** Small controls, chips, inputs */
+  --radius-sm: 0.5rem;
+
+  /** Cards, buttons, default rounded UI */
+  --radius-md: 0.75rem;
+
+  /** Modals, hero panels, large surfaces */
+  --radius-lg: 1rem;
+
+  /* -------------------------------------------------------------------------
+   * Spacing — eight-point style scale (from BrandConfig.spacing preset)
+   * ------------------------------------------------------------------------- */
+
+  /** Tightest gap — icon gaps, dense rows */
+  --space-xs: 0.25rem;
+
+  /** Small gap — inline fields, compact stacks */
+  --space-sm: 0.5rem;
+
+  /** Default gap — section padding, form groups */
+  --space-md: 1rem;
+
+  /** Comfortable gap — between major blocks */
+  --space-lg: 1.5rem;
+
+  /** Large gap — section vertical rhythm */
+  --space-xl: 2rem;
+
+  /** Largest gap — hero spacing, page sections */
+  --space-2xl: 3rem;
+}

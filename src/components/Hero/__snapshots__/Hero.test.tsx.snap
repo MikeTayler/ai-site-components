@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero variant centered matches snapshot 1`] = `
+<section
+  class="hero hero_centered"
+  data-bg="background"
+  data-spacing="normal"
+  data-variant="centered"
+>
+  <div
+    class="hero_inner"
+    data-max-width="wide"
+  >
+    <div
+      class="hero_text"
+    >
+      <h1
+        class="hero_heading"
+        data-content-path="content.heading"
+      >
+        Snap
+      </h1>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Hero variant full-bleed matches snapshot 1`] = `
+<section
+  class="hero hero_centered hero_fullBleed"
+  data-bg="background"
+  data-spacing="normal"
+  data-variant="full-bleed"
+>
+  <div
+    class="hero_inner"
+    data-max-width="wide"
+  >
+    <div
+      class="hero_text"
+    >
+      <h1
+        class="hero_heading"
+        data-content-path="content.heading"
+      >
+        Snap
+      </h1>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Hero variant split matches snapshot 1`] = `
+<section
+  class="hero"
+  data-bg="background"
+  data-spacing="normal"
+  data-variant="split"
+>
+  <div
+    class="hero_inner hero_split"
+    data-max-width="wide"
+  >
+    <div
+      class="hero_text"
+    >
+      <h1
+        class="hero_heading"
+        data-content-path="content.heading"
+      >
+        Snap
+      </h1>
+    </div>
+    <div
+      aria-hidden="true"
+      class="hero_visual"
+    />
+  </div>
+</section>
+`;
+
+exports[`Hero variant video matches snapshot 1`] = `
+<section
+  class="hero"
+  data-bg="background"
+  data-spacing="normal"
+  data-variant="video"
+>
+  <div
+    class="hero_inner hero_split"
+    data-max-width="wide"
+  >
+    <div
+      class="hero_text"
+    >
+      <h1
+        class="hero_heading"
+        data-content-path="content.heading"
+      >
+        Snap
+      </h1>
+    </div>
+    <div
+      class="hero_videoWrap"
+    >
+      <video
+        class="hero_video"
+        controls=""
+        playsinline=""
+        src="https://x.com/v.mp4"
+      />
+    </div>
+  </div>
+</section>
+`;

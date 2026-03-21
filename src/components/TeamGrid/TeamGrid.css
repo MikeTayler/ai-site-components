@@ -1,0 +1,116 @@
+.teamGrid {
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--space-xl) var(--space-md);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+.teamGrid_inner {
+  box-sizing: border-box;
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+.teamGrid[data-max-width="narrow"] .teamGrid_inner {
+  max-width: 42rem;
+}
+
+.teamGrid[data-max-width="full"] .teamGrid_inner {
+  max-width: none;
+}
+
+.teamGrid_heading {
+  margin: 0 0 var(--space-lg);
+  font-family: var(--font-heading);
+  font-size: calc(var(--font-size-base) * var(--type-scale) * var(--type-scale));
+  font-weight: 700;
+  text-align: center;
+}
+
+.teamGrid_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.teamGrid--cards .teamGrid_list {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48rem) {
+  .teamGrid--cards .teamGrid_list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.teamGrid--headshots .teamGrid_list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 48rem) {
+  .teamGrid--headshots .teamGrid_list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.teamGrid--headshots .teamGrid_bio {
+  display: none;
+}
+
+.teamGrid--detailed .teamGrid_list {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48rem) {
+  .teamGrid--detailed .teamGrid_card {
+    display: grid;
+    grid-template-columns: 8rem minmax(0, 1fr);
+    gap: var(--space-md);
+    align-items: start;
+  }
+}
+
+.teamGrid_card {
+  margin: 0;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background-color: var(--color-neutral);
+  box-shadow: inset 0 0 0 1px var(--color-text-light);
+}
+
+.teamGrid_avatar {
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 8rem;
+  margin-bottom: var(--space-sm);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-secondary);
+  box-shadow: inset 0 0 0 1px var(--color-text-light);
+}
+
+.teamGrid--headshots .teamGrid_avatar {
+  border-radius: 50%;
+}
+
+.teamGrid_name {
+  margin: 0 0 var(--space-xs);
+  font-family: var(--font-heading);
+  font-size: calc(var(--font-size-base) * var(--type-scale));
+  font-weight: 600;
+}
+
+.teamGrid_role {
+  margin: 0 0 var(--space-sm);
+  color: var(--color-text-light);
+  font-size: calc(var(--font-size-base) * 0.95);
+}
+
+.teamGrid_bio {
+  margin: 0;
+  line-height: 1.55;
+  font-size: var(--font-size-base);
+}

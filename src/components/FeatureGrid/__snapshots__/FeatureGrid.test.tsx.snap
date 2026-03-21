@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeatureGrid variant alternating matches snapshot 1`] = `
+<section
+  class="featureGrid featureGrid--alternating"
+  data-max-width="wide"
+  data-variant="alternating"
+>
+  <div
+    class="featureGrid_inner"
+  >
+    <h2
+      class="featureGrid_heading"
+      data-content-path="content.heading"
+    >
+      Snap
+    </h2>
+    <ul
+      class="featureGrid_list"
+    >
+      <li
+        class="featureGrid_item"
+      >
+        <div
+          aria-hidden="true"
+          class="featureGrid_visual"
+        />
+        <div
+          class="featureGrid_text"
+        >
+          <h3
+            class="featureGrid_title"
+            data-content-path="content.items[0].title"
+          >
+            One
+          </h3>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`FeatureGrid variant three-column matches snapshot 1`] = `
+<section
+  class="featureGrid featureGrid--three-column"
+  data-max-width="wide"
+  data-variant="three-column"
+>
+  <div
+    class="featureGrid_inner"
+  >
+    <h2
+      class="featureGrid_heading"
+      data-content-path="content.heading"
+    >
+      Snap
+    </h2>
+    <ul
+      class="featureGrid_list"
+    >
+      <li
+        class="featureGrid_item"
+      >
+        <div
+          class="featureGrid_text"
+        >
+          <h3
+            class="featureGrid_title"
+            data-content-path="content.items[0].title"
+          >
+            One
+          </h3>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`FeatureGrid variant two-column-images matches snapshot 1`] = `
+<section
+  class="featureGrid featureGrid--two-column-images"
+  data-max-width="wide"
+  data-variant="two-column-images"
+>
+  <div
+    class="featureGrid_inner"
+  >
+    <h2
+      class="featureGrid_heading"
+      data-content-path="content.heading"
+    >
+      Snap
+    </h2>
+    <ul
+      class="featureGrid_list"
+    >
+      <li
+        class="featureGrid_item"
+      >
+        <div
+          aria-hidden="true"
+          class="featureGrid_visual"
+        />
+        <div
+          class="featureGrid_text"
+        >
+          <h3
+            class="featureGrid_title"
+            data-content-path="content.items[0].title"
+          >
+            One
+          </h3>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+`;

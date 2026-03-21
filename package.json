@@ -1,0 +1,96 @@
+{
+  "name": "@ai-site/components",
+  "version": "0.0.0",
+  "description": "Shared React component library for AI Site Builder client sites",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MikeTayler/ai-site-components.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./tokens.css": "./dist/tokens.css",
+    "./theme.css": "./dist/theme.css",
+    "./index.css": "./dist/index.css",
+    "./components/CTABanner/CTABanner.schema.json": "./dist/components/CTABanner/CTABanner.schema.json",
+    "./components/ContactForm/ContactForm.schema.json": "./dist/components/ContactForm/ContactForm.schema.json",
+    "./components/FAQAccordion/FAQAccordion.schema.json": "./dist/components/FAQAccordion/FAQAccordion.schema.json",
+    "./components/FeatureGrid/FeatureGrid.schema.json": "./dist/components/FeatureGrid/FeatureGrid.schema.json",
+    "./components/Hero/Hero.schema.json": "./dist/components/Hero/Hero.schema.json",
+    "./components/ImageGallery/ImageGallery.schema.json": "./dist/components/ImageGallery/ImageGallery.schema.json",
+    "./components/PricingTable/PricingTable.schema.json": "./dist/components/PricingTable/PricingTable.schema.json",
+    "./components/SiteFooter/SiteFooter.schema.json": "./dist/components/SiteFooter/SiteFooter.schema.json",
+    "./components/SiteHeader/SiteHeader.schema.json": "./dist/components/SiteHeader/SiteHeader.schema.json",
+    "./components/Stats/Stats.schema.json": "./dist/components/Stats/Stats.schema.json",
+    "./components/TeamGrid/TeamGrid.schema.json": "./dist/components/TeamGrid/TeamGrid.schema.json",
+    "./components/Testimonials/Testimonials.schema.json": "./dist/components/Testimonials/Testimonials.schema.json",
+    "./components/TextContent/TextContent.schema.json": "./dist/components/TextContent/TextContent.schema.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup && node scripts/copy-assets.mjs",
+    "clean": "rm -rf dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "test:ci": "jest --ci --watchAll=false",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build -o storybook-static"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "overrides": {
+    "esbuild": "0.27.4"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-links": "^8.6.18",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/react-vite": "^8.6.18",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^14.3.1",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^18.3.14",
+    "@types/react-dom": "^18.3.5",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "ajv": "^8.18.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.4.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "storybook": "^8.6.18",
+    "ts-jest": "^29.4.6",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.21"
+  }
+}

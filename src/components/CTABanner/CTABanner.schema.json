@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-site.dev/schemas/components/CTABanner.schema.json",
+  "title": "CTABanner",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["variant", "content"],
+  "properties": {
+    "variant": {
+      "type": "string",
+      "enum": ["inline", "full-width", "with-image"]
+    },
+    "content": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["heading"],
+      "properties": {
+        "heading": { "type": "string", "minLength": 1 },
+        "subheading": { "type": "string" },
+        "cta": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["label", "href"],
+          "properties": {
+            "label": { "type": "string", "minLength": 1 },
+            "href": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+    "settings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "background": {
+          "type": "string",
+          "enum": ["primary", "accent", "neutral", "background"]
+        }
+      }
+    },
+    "className": { "type": "string" },
+    "contentPathPrefix": { "type": "string" }
+  }
+}

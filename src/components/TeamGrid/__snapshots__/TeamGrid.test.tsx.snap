@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamGrid variant cards matches snapshot 1`] = `
+<section
+  class="teamGrid teamGrid--cards"
+  data-max-width="wide"
+  data-variant="cards"
+>
+  <div
+    class="teamGrid_inner"
+  >
+    <ul
+      class="teamGrid_list"
+    >
+      <li
+        class="teamGrid_card"
+      >
+        <div
+          aria-hidden="true"
+          class="teamGrid_avatar"
+        />
+        <div
+          class="teamGrid_meta"
+        >
+          <h3
+            class="teamGrid_name"
+            data-content-path="content.members[0].name"
+          >
+            Snap
+          </h3>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`TeamGrid variant detailed matches snapshot 1`] = `
+<section
+  class="teamGrid teamGrid--detailed"
+  data-max-width="wide"
+  data-variant="detailed"
+>
+  <div
+    class="teamGrid_inner"
+  >
+    <ul
+      class="teamGrid_list"
+    >
+      <li
+        class="teamGrid_card"
+      >
+        <div
+          aria-hidden="true"
+          class="teamGrid_avatar"
+        />
+        <div
+          class="teamGrid_meta"
+        >
+          <h3
+            class="teamGrid_name"
+            data-content-path="content.members[0].name"
+          >
+            Snap
+          </h3>
+          <p
+            class="teamGrid_bio"
+            data-content-path="content.members[0].bio"
+          >
+            B
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`TeamGrid variant headshots matches snapshot 1`] = `
+<section
+  class="teamGrid teamGrid--headshots"
+  data-max-width="wide"
+  data-variant="headshots"
+>
+  <div
+    class="teamGrid_inner"
+  >
+    <ul
+      class="teamGrid_list"
+    >
+      <li
+        class="teamGrid_card"
+      >
+        <div
+          aria-hidden="true"
+          class="teamGrid_avatar"
+        />
+        <div
+          class="teamGrid_meta"
+        >
+          <h3
+            class="teamGrid_name"
+            data-content-path="content.members[0].name"
+          >
+            Snap
+          </h3>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+`;

@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SiteHeader variant centered matches snapshot 1`] = `
+<header
+  class="siteHeader siteHeader--centered"
+  data-bg="background"
+  data-max-width="wide"
+  data-variant="centered"
+>
+  <div
+    class="siteHeader_inner"
+  >
+    <a
+      class="siteHeader_brand"
+      data-content-path="content.siteTitle"
+      href="/"
+    >
+      S
+    </a>
+    <nav
+      aria-label="Primary"
+      class="siteHeader_nav"
+    >
+      <ul
+        class="siteHeader_navList"
+      >
+        <li
+          class="siteHeader_navItem"
+        >
+          <a
+            class="siteHeader_link"
+            data-content-path="content.navLinks[0].label"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+`;
+
+exports[`SiteHeader variant left-aligned matches snapshot 1`] = `
+<header
+  class="siteHeader siteHeader--left-aligned"
+  data-bg="background"
+  data-max-width="wide"
+  data-variant="left-aligned"
+>
+  <div
+    class="siteHeader_inner"
+  >
+    <a
+      class="siteHeader_brand"
+      data-content-path="content.siteTitle"
+      href="/"
+    >
+      S
+    </a>
+    <nav
+      aria-label="Primary"
+      class="siteHeader_nav"
+    >
+      <ul
+        class="siteHeader_navList"
+      >
+        <li
+          class="siteHeader_navItem"
+        >
+          <a
+            class="siteHeader_link"
+            data-content-path="content.navLinks[0].label"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+`;
+
+exports[`SiteHeader variant sticky matches snapshot 1`] = `
+<header
+  class="siteHeader siteHeader--sticky"
+  data-bg="background"
+  data-max-width="wide"
+  data-variant="sticky"
+>
+  <div
+    class="siteHeader_inner"
+  >
+    <a
+      class="siteHeader_brand"
+      data-content-path="content.siteTitle"
+      href="/"
+    >
+      S
+    </a>
+    <nav
+      aria-label="Primary"
+      class="siteHeader_nav"
+    >
+      <ul
+        class="siteHeader_navList"
+      >
+        <li
+          class="siteHeader_navItem"
+        >
+          <a
+            class="siteHeader_link"
+            data-content-path="content.navLinks[0].label"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+`;
+
+exports[`SiteHeader variant transparent matches snapshot 1`] = `
+<header
+  class="siteHeader siteHeader--transparent siteHeader--bgTransparent"
+  data-bg="background"
+  data-max-width="wide"
+  data-variant="transparent"
+>
+  <div
+    class="siteHeader_inner"
+  >
+    <a
+      class="siteHeader_brand"
+      data-content-path="content.siteTitle"
+      href="/"
+    >
+      S
+    </a>
+    <nav
+      aria-label="Primary"
+      class="siteHeader_nav"
+    >
+      <ul
+        class="siteHeader_navList"
+      >
+        <li
+          class="siteHeader_navItem"
+        >
+          <a
+            class="siteHeader_link"
+            data-content-path="content.navLinks[0].label"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+`;

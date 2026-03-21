@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SiteFooter variant multi-column matches snapshot 1`] = `
+<footer
+  class="siteFooter siteFooter--multi-column"
+  data-bg="neutral"
+  data-variant="multi-column"
+>
+  <div
+    class="siteFooter_inner"
+  >
+    <div
+      class="siteFooter_grid"
+    >
+      <div
+        class="siteFooter_column"
+      >
+        <h3
+          class="siteFooter_columnTitle"
+          data-content-path="content.columns[0].heading"
+        >
+          Col
+        </h3>
+        <ul
+          class="siteFooter_linkList"
+        >
+          <li>
+            <a
+              class="siteFooter_link"
+              data-content-path="content.columns[0].links[0].label"
+              href="/a"
+            >
+              Link
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="siteFooter_bottom"
+    >
+      <p
+        class="siteFooter_copy"
+        data-content-path="content.copyrightText"
+      >
+        Snap
+      </p>
+    </div>
+  </div>
+</footer>
+`;
+
+exports[`SiteFooter variant newsletter matches snapshot 1`] = `
+<footer
+  class="siteFooter siteFooter--newsletter"
+  data-bg="neutral"
+  data-variant="newsletter"
+>
+  <div
+    class="siteFooter_inner"
+  >
+    <div
+      class="siteFooter_newsletter"
+    >
+      <p
+        class="siteFooter_newsletterTitle"
+        data-content-path="content.newsletterHeading"
+      >
+        News
+      </p>
+      <form
+        aria-label="Newsletter signup"
+        class="siteFooter_newsletterForm"
+      >
+        <input
+          aria-label="Email address"
+          class="siteFooter_input"
+          name="email"
+          placeholder="Email address"
+          type="email"
+        />
+        <button
+          class="siteFooter_submit"
+          type="submit"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
+    <div
+      class="siteFooter_bottom"
+    >
+      <p
+        class="siteFooter_copy"
+        data-content-path="content.copyrightText"
+      >
+        Snap
+      </p>
+    </div>
+  </div>
+</footer>
+`;
+
+exports[`SiteFooter variant simple matches snapshot 1`] = `
+<footer
+  class="siteFooter siteFooter--simple"
+  data-bg="neutral"
+  data-variant="simple"
+>
+  <div
+    class="siteFooter_inner"
+  >
+    <div
+      class="siteFooter_bottom"
+    >
+      <p
+        class="siteFooter_copy"
+        data-content-path="content.copyrightText"
+      >
+        Snap
+      </p>
+    </div>
+  </div>
+</footer>
+`;

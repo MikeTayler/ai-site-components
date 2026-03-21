@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageGallery variant grid matches snapshot 1`] = `
+<section
+  class="imageGallery imageGallery--grid"
+  data-max-width="wide"
+  data-variant="grid"
+>
+  <div
+    class="imageGallery_inner"
+  >
+    <ul
+      class="imageGallery_list"
+    >
+      <li
+        class="imageGallery_item"
+      >
+        <div
+          aria-label="Snap"
+          class="imageGallery_placeholder"
+          data-content-path="content.items[0].alt"
+          role="img"
+        />
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`ImageGallery variant lightbox matches snapshot 1`] = `
+<section
+  class="imageGallery imageGallery--lightbox"
+  data-max-width="wide"
+  data-variant="lightbox"
+>
+  <div
+    class="imageGallery_inner"
+  >
+    <ul
+      class="imageGallery_list"
+    >
+      <li
+        class="imageGallery_item"
+      >
+        <div
+          aria-label="Snap"
+          class="imageGallery_placeholder"
+          data-content-path="content.items[0].alt"
+          role="img"
+        />
+        <button
+          aria-disabled="true"
+          class="imageGallery_lightboxBtn"
+          disabled=""
+          type="button"
+        >
+          View
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`ImageGallery variant masonry matches snapshot 1`] = `
+<section
+  class="imageGallery imageGallery--masonry"
+  data-max-width="wide"
+  data-variant="masonry"
+>
+  <div
+    class="imageGallery_inner"
+  >
+    <ul
+      class="imageGallery_list"
+    >
+      <li
+        class="imageGallery_item"
+      >
+        <div
+          aria-label="Snap"
+          class="imageGallery_placeholder"
+          data-content-path="content.items[0].alt"
+          role="img"
+        />
+      </li>
+    </ul>
+  </div>
+</section>
+`;

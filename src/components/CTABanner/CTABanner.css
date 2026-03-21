@@ -1,0 +1,112 @@
+.ctaBanner {
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--space-xl) var(--space-md);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-accent);
+}
+
+.ctaBanner[data-bg="primary"] {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.ctaBanner[data-bg="neutral"] {
+  background-color: var(--color-neutral);
+  color: var(--color-text);
+}
+
+.ctaBanner[data-bg="background"] {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  box-shadow: inset 0 0 0 1px var(--color-text-light);
+}
+
+.ctaBanner[data-bg="primary"] .ctaBanner_sub,
+.ctaBanner[data-bg="accent"] .ctaBanner_sub {
+  color: inherit;
+  opacity: 0.9;
+}
+
+.ctaBanner_inner {
+  box-sizing: border-box;
+  max-width: 72rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: center;
+  text-align: center;
+}
+
+.ctaBanner--inline .ctaBanner_inner {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.ctaBanner--full-width .ctaBanner_inner {
+  max-width: none;
+}
+
+.ctaBanner--with-image .ctaBanner_inner {
+  display: grid;
+  gap: var(--space-lg);
+  text-align: left;
+}
+
+@media (min-width: 48rem) {
+  .ctaBanner--with-image .ctaBanner_inner {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    align-items: center;
+  }
+}
+
+.ctaBanner_visual {
+  min-height: 12rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-neutral);
+  box-shadow: inset 0 0 0 1px var(--color-text-light);
+}
+
+.ctaBanner[data-bg="primary"] .ctaBanner_visual {
+  background-color: var(--color-secondary);
+}
+
+.ctaBanner_heading {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-heading);
+  font-size: calc(var(--font-size-base) * var(--type-scale) * var(--type-scale));
+  font-weight: 700;
+}
+
+.ctaBanner_sub {
+  margin: 0 0 var(--space-md);
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+.ctaBanner_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-lg);
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  background-color: var(--color-background);
+  color: var(--color-accent);
+}
+
+.ctaBanner[data-bg="background"] .ctaBanner_btn {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+}
+
+.ctaBanner[data-bg="neutral"] .ctaBanner_btn {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
