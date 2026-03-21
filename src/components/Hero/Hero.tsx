@@ -1,5 +1,6 @@
 import "./Hero.css";
 import type { ReactNode } from "react";
+import { SiteImage } from "@site/image";
 import { joinPath } from "../../lib/joinPath.js";
 
 /** JSON / registry variant names (kebab-case in page JSON). */
@@ -10,13 +11,23 @@ export interface HeroCta {
   href: string;
 }
 
+export interface HeroImage {
+  src: string;
+  alt: string;
+  focalPoint?: { x: number; y: number };
+  width?: number;
+  height?: number;
+}
+
 export interface HeroContent {
   heading: string;
   subheading?: string;
   cta?: HeroCta;
-  /** Used by `video` variant — embed URL or direct video asset */
+  /** Used by `video` variant — embed URL or direct .mp4/.webm URL */
   videoUrl?: string;
   posterImageUrl?: string;
+  /** Optional hero visual for `split` (and similar) layouts */
+  image?: HeroImage;
 }
 
 export type HeroBackground = "primary" | "neutral" | "background" | "accent";
@@ -73,7 +84,7 @@ function VideoMedia({ url, poster }: { url: string; poster?: string }): ReactNod
 export default function Hero(props: HeroProps): ReactNode {
   const { variant, content, className, contentPathPrefix = "" } = props;
   const settings = { ...defaultSettings, ...(props.settings ?? {}) };
-  const { heading, subheading, cta, videoUrl, posterImageUrl } = content;
+  const { heading, subheading, cta, videoUrl, posterImageUrl, image } = content;
 
   const spacing = settings.spacing;
   const bg = settings.background;
@@ -123,7 +134,18 @@ export default function Hero(props: HeroProps): ReactNode {
     body = (
       <>
         {textBlock}
-        {visualPlaceholder}
+        <div className={`hero_visual hero_visual--media`}>
+          <SiteImage
+            src={image?.src ?? ""}
+            alt={image?.alt ?? "Hero visual"}
+            focalPoint={image?.focalPoint}
+            width={image?.width}
+            height={image?.height}
+            fill
+            sizeContext="hero"
+            contentPathPrefix={p("content.image")}
+          />
+        </div>
       </>
     );
   } else if (variant === "video") {

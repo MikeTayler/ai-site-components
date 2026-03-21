@@ -1,5 +1,6 @@
 import "./CTABanner.css";
 import type { ReactNode } from "react";
+import { SiteImage } from "@site/image";
 import { joinPath } from "../../lib/joinPath.js";
 
 export type CTABannerVariant = "inline" | "full-width" | "with-image";
@@ -9,10 +10,20 @@ export interface CTABannerCta {
   href: string;
 }
 
+export interface CTABannerImage {
+  src: string;
+  alt: string;
+  focalPoint?: { x: number; y: number };
+  width?: number;
+  height?: number;
+}
+
 export interface CTABannerContent {
   heading: string;
   subheading?: string;
   cta?: CTABannerCta;
+  /** Shown in the `with-image` variant */
+  image?: CTABannerImage;
 }
 
 export type CTABannerBackground = "primary" | "accent" | "neutral" | "background";
@@ -36,7 +47,7 @@ const defaultSettings: Required<CTABannerSettings> = {
 export default function CTABanner(props: CTABannerProps): ReactNode {
   const { variant, content, className, contentPathPrefix = "" } = props;
   const settings = { ...defaultSettings, ...(props.settings ?? {}) };
-  const { heading, subheading, cta } = content;
+  const { heading, subheading, cta, image } = content;
   const p = (s: string) => joinPath(contentPathPrefix, s);
 
   const inner = (
@@ -67,7 +78,18 @@ export default function CTABanner(props: CTABannerProps): ReactNode {
         {variant === "with-image" ? (
           <>
             {inner}
-            <div className="ctaBanner_visual" aria-hidden />
+            <div className="ctaBanner_visual ctaBanner_visual--media">
+              <SiteImage
+                src={image?.src ?? ""}
+                alt={image?.alt ?? heading}
+                focalPoint={image?.focalPoint}
+                width={image?.width}
+                height={image?.height}
+                fill
+                sizeContext="cta"
+                contentPathPrefix={p("content.image")}
+              />
+            </div>
           </>
         ) : (
           inner

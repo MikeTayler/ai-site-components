@@ -25,7 +25,27 @@
             "required": ["title"],
             "properties": {
               "title": { "type": "string", "minLength": 1 },
-              "description": { "type": "string" }
+              "description": { "type": "string" },
+              "image": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["src", "alt"],
+                "properties": {
+                  "src": { "type": "string" },
+                  "alt": { "type": "string", "minLength": 1 },
+                  "focalPoint": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["x", "y"],
+                    "properties": {
+                      "x": { "type": "number" },
+                      "y": { "type": "number" }
+                    }
+                  },
+                  "width": { "type": "number" },
+                  "height": { "type": "number" }
+                }
+              }
             }
           }
         }

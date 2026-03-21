@@ -21,7 +21,8 @@
     "outDir": "./dist",
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@site/image": ["./stubs/siteImage.tsx"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],

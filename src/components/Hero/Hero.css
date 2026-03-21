@@ -152,6 +152,16 @@
   box-shadow: inset 0 0 0 1px var(--color-text-light);
 }
 
+.hero_visual--media {
+  position: relative;
+  overflow: hidden;
+  min-height: 14rem;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--color-text-light);
+}
+
 .hero[data-bg="primary"] .hero_visual,
 .hero[data-bg="accent"] .hero_visual {
   background-color: var(--color-secondary);

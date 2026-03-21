@@ -83,6 +83,8 @@
 }
 
 .teamGrid_avatar {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   aspect-ratio: 1;
   max-width: 8rem;

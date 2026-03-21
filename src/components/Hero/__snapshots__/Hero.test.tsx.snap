@@ -72,9 +72,14 @@ exports[`Hero variant split matches snapshot 1`] = `
       </h1>
     </div>
     <div
-      aria-hidden="true"
-      class="hero_visual"
-    />
+      class="hero_visual hero_visual--media"
+    >
+      <div
+        aria-label="Hero visual"
+        data-testid="site-image-stub"
+        role="img"
+      />
+    </div>
   </div>
 </section>
 `;

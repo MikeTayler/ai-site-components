@@ -1,12 +1,22 @@
 import "./FeatureGrid.css";
 import type { ReactNode } from "react";
+import { SiteImage } from "@site/image";
 import { joinPath } from "../../lib/joinPath.js";
 
 export type FeatureGridVariant = "three-column" | "two-column-images" | "alternating";
 
+export interface FeatureGridImage {
+  src: string;
+  alt: string;
+  focalPoint?: { x: number; y: number };
+  width?: number;
+  height?: number;
+}
+
 export interface FeatureGridItem {
   title: string;
   description?: string;
+  image?: FeatureGridImage;
 }
 
 export interface FeatureGridContent {
@@ -52,7 +62,18 @@ export default function FeatureGrid(props: FeatureGridProps): ReactNode {
           {items.map((item, i) => (
             <li key={i} className="featureGrid_item">
               {(variant === "two-column-images" || variant === "alternating") && (
-                <div className="featureGrid_visual" aria-hidden />
+                <div className="featureGrid_visual featureGrid_visual--media">
+                  <SiteImage
+                    src={item.image?.src ?? ""}
+                    alt={item.image?.alt ?? item.title}
+                    focalPoint={item.image?.focalPoint}
+                    width={item.image?.width}
+                    height={item.image?.height}
+                    fill
+                    sizeContext="card"
+                    contentPathPrefix={p(`content.items[${i}].image`)}
+                  />
+                </div>
               )}
               <div className="featureGrid_text">
                 <h3

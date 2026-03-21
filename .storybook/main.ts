@@ -20,6 +20,7 @@ const config: StorybookConfig = {
       resolve: {
         alias: {
           "@": path.resolve(dirname, "../src"),
+          "@site/image": path.resolve(dirname, "../src/stubs/siteImage.tsx"),
         },
       },
     });

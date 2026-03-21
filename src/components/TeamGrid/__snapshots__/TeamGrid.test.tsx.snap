@@ -16,9 +16,14 @@ exports[`TeamGrid variant cards matches snapshot 1`] = `
         class="teamGrid_card"
       >
         <div
-          aria-hidden="true"
           class="teamGrid_avatar"
-        />
+        >
+          <div
+            aria-label="Portrait of Snap"
+            data-testid="site-image-stub"
+            role="img"
+          />
+        </div>
         <div
           class="teamGrid_meta"
         >
@@ -51,9 +56,14 @@ exports[`TeamGrid variant detailed matches snapshot 1`] = `
         class="teamGrid_card"
       >
         <div
-          aria-hidden="true"
           class="teamGrid_avatar"
-        />
+        >
+          <div
+            aria-label="Portrait of Snap"
+            data-testid="site-image-stub"
+            role="img"
+          />
+        </div>
         <div
           class="teamGrid_meta"
         >
@@ -92,9 +102,14 @@ exports[`TeamGrid variant headshots matches snapshot 1`] = `
         class="teamGrid_card"
       >
         <div
-          aria-hidden="true"
           class="teamGrid_avatar"
-        />
+        >
+          <div
+            aria-label="Portrait of Snap"
+            data-testid="site-image-stub"
+            role="img"
+          />
+        </div>
         <div
           class="teamGrid_meta"
         >

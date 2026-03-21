@@ -1,13 +1,23 @@
 import "./TeamGrid.css";
 import type { ReactNode } from "react";
+import { SiteImage } from "@site/image";
 import { joinPath } from "../../lib/joinPath.js";
 
 export type TeamGridVariant = "cards" | "headshots" | "detailed";
+
+export interface TeamMemberImage {
+  src: string;
+  alt: string;
+  focalPoint?: { x: number; y: number };
+  width?: number;
+  height?: number;
+}
 
 export interface TeamMember {
   name: string;
   role?: string;
   bio?: string;
+  image?: TeamMemberImage;
 }
 
 export interface TeamGridContent {
@@ -52,7 +62,17 @@ export default function TeamGrid(props: TeamGridProps): ReactNode {
         <ul className="teamGrid_list">
           {members.map((member, i) => (
             <li key={i} className="teamGrid_card">
-              <div className="teamGrid_avatar" aria-hidden />
+              <div className="teamGrid_avatar">
+                <SiteImage
+                  src={member.image?.src ?? ""}
+                  alt={member.image?.alt ?? `Portrait of ${member.name}`}
+                  focalPoint={member.image?.focalPoint}
+                  width={member.image?.width ?? 160}
+                  height={member.image?.height ?? 160}
+                  sizeContext="avatar"
+                  contentPathPrefix={p(`content.members[${i}].image`)}
+                />
+              </div>
               <div className="teamGrid_meta">
                 <h3 className="teamGrid_name" data-content-path={p(`content.members[${i}].name`)}>
                   {member.name}

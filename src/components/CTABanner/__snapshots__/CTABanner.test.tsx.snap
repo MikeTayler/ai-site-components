@@ -66,9 +66,14 @@ exports[`CTABanner variant with-image matches snapshot 1`] = `
       </h2>
     </div>
     <div
-      aria-hidden="true"
-      class="ctaBanner_visual"
-    />
+      class="ctaBanner_visual ctaBanner_visual--media"
+    >
+      <div
+        aria-label="Snap"
+        data-testid="site-image-stub"
+        role="img"
+      />
+    </div>
   </div>
 </section>
 `;

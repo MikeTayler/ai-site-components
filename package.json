@@ -41,7 +41,11 @@
     "./components/TextContent/TextContent.schema.json": "./dist/components/TextContent/TextContent.schema.json"
   },
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "scripts",
+    "tsup.config.ts",
+    "tsconfig.json"
   ],
   "scripts": {
     "build": "tsup && node scripts/copy-assets.mjs",
@@ -58,7 +62,8 @@
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
-    "react-dom": "^18.0.0 || ^19.0.0"
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "next": ">=14.0.0"
   },
   "overrides": {
     "esbuild": "0.27.4"
@@ -84,6 +89,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "next": "14.2.35",
     "prettier": "^3.4.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

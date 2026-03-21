@@ -1,5 +1,6 @@
 import "./ImageGallery.css";
 import type { ReactNode } from "react";
+import { SiteImage } from "@site/image";
 import { joinPath } from "../../lib/joinPath.js";
 
 export type ImageGalleryVariant = "grid" | "masonry" | "lightbox";
@@ -7,6 +8,11 @@ export type ImageGalleryVariant = "grid" | "masonry" | "lightbox";
 export interface ImageGalleryItem {
   alt: string;
   caption?: string;
+  /** Image URL; omit or empty to show branded placeholder */
+  src?: string;
+  focalPoint?: { x: number; y: number };
+  width?: number;
+  height?: number;
 }
 
 export interface ImageGalleryContent {
@@ -51,12 +57,18 @@ export default function ImageGallery(props: ImageGalleryProps): ReactNode {
         <ul className="imageGallery_list">
           {items.map((item, i) => (
             <li key={i} className="imageGallery_item">
-              <div
-                className="imageGallery_placeholder"
-                role="img"
-                aria-label={item.alt}
-                data-content-path={p(`content.items[${i}].alt`)}
-              />
+              <div className="imageGallery_media">
+                <SiteImage
+                  src={item.src ?? ""}
+                  alt={item.alt}
+                  focalPoint={item.focalPoint}
+                  width={item.width}
+                  height={item.height}
+                  fill
+                  sizeContext="gallery"
+                  contentPathPrefix={p(`content.items[${i}]`)}
+                />
+              </div>
               {item.caption ? (
                 <p
                   className="imageGallery_caption"

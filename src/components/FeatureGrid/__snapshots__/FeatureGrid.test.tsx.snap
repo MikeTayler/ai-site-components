@@ -22,9 +22,14 @@ exports[`FeatureGrid variant alternating matches snapshot 1`] = `
         class="featureGrid_item"
       >
         <div
-          aria-hidden="true"
-          class="featureGrid_visual"
-        />
+          class="featureGrid_visual featureGrid_visual--media"
+        >
+          <div
+            aria-label="One"
+            data-testid="site-image-stub"
+            role="img"
+          />
+        </div>
         <div
           class="featureGrid_text"
         >
@@ -100,9 +105,14 @@ exports[`FeatureGrid variant two-column-images matches snapshot 1`] = `
         class="featureGrid_item"
       >
         <div
-          aria-hidden="true"
-          class="featureGrid_visual"
-        />
+          class="featureGrid_visual featureGrid_visual--media"
+        >
+          <div
+            aria-label="One"
+            data-testid="site-image-stub"
+            role="img"
+          />
+        </div>
         <div
           class="featureGrid_text"
         >

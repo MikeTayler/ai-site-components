@@ -87,6 +87,15 @@
   box-shadow: inset 0 0 0 1px var(--color-text-light);
 }
 
+.featureGrid_visual--media {
+  position: relative;
+  min-height: 12rem;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  padding: 0;
+  background: transparent;
+}
+
 .featureGrid_title {
   margin: 0 0 var(--space-sm);
   font-family: var(--font-heading);

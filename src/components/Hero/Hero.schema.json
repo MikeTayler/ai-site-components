@@ -42,6 +42,27 @@
         "posterImageUrl": {
           "type": "string",
           "description": "Optional poster image URL for HTML5 video (`videoUrl` file asset)."
+        },
+        "image": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["src", "alt"],
+          "properties": {
+            "src": { "type": "string" },
+            "alt": { "type": "string", "minLength": 1 },
+            "focalPoint": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["x", "y"],
+              "properties": {
+                "x": { "type": "number" },
+                "y": { "type": "number" }
+              }
+            },
+            "width": { "type": "number" },
+            "height": { "type": "number" }
+          },
+          "description": "Optional image for split-layout hero visual (SiteImage)."
         }
       }
     },

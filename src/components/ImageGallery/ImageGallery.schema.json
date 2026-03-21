@@ -22,7 +22,19 @@
             "required": ["alt"],
             "properties": {
               "alt": { "type": "string", "minLength": 1 },
-              "caption": { "type": "string" }
+              "caption": { "type": "string" },
+              "src": { "type": "string" },
+              "focalPoint": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["x", "y"],
+                "properties": {
+                  "x": { "type": "number" },
+                  "y": { "type": "number" }
+                }
+              },
+              "width": { "type": "number" },
+              "height": { "type": "number" }
             }
           }
         }
