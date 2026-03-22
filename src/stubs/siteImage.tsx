@@ -28,6 +28,7 @@ export interface SiteImageProps extends ImageConfig {
   fill?: boolean;
   priority?: boolean;
   contentPathPrefix?: string;
+  objectFit?: "cover" | "contain";
 }
 
 export function SiteImage(props: SiteImageProps): ReactNode {

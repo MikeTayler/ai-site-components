@@ -1,5 +1,6 @@
 import "./SiteHeader.css";
 import type { ReactNode } from "react";
+import { SiteImage } from "@site/image";
 import { joinPath } from "../../lib/joinPath.js";
 
 export type SiteHeaderVariant = "centered" | "left-aligned" | "transparent" | "sticky";
@@ -13,6 +14,8 @@ export interface SiteHeaderContent {
   siteTitle: string;
   navLinks: SiteHeaderNavLink[];
   cta?: { label: string; href: string };
+  /** Brand logos: `light` = for dark surfaces (e.g. primary header); `dark` = for light surfaces. */
+  logo?: { light: string; dark: string };
 }
 
 export type SiteHeaderBackground = "background" | "neutral" | "primary" | "transparent";
@@ -36,10 +39,18 @@ const defaultSettings: Required<SiteHeaderSettings> = {
   maxWidth: "wide",
 };
 
+function logoSrcForBackground(
+  logo: { light: string; dark: string },
+  bg: SiteHeaderBackground,
+): string {
+  if (bg === "primary") return logo.light;
+  return logo.dark;
+}
+
 export default function SiteHeader(props: SiteHeaderProps): ReactNode {
   const { variant, content, className, contentPathPrefix = "" } = props;
   const settings = { ...defaultSettings, ...(props.settings ?? {}) };
-  const { siteTitle, navLinks, cta } = content;
+  const { siteTitle, navLinks, cta, logo } = content;
   const p = (s: string) => joinPath(contentPathPrefix, s);
 
   const rootClass = [
@@ -61,7 +72,21 @@ export default function SiteHeader(props: SiteHeaderProps): ReactNode {
     >
       <div className="siteHeader_inner">
         <a className="siteHeader_brand" href="/" data-content-path={p("content.siteTitle")}>
-          {siteTitle}
+          {logo ? (
+            <SiteImage
+              src={logoSrcForBackground(logo, settings.background)}
+              alt={siteTitle}
+              width={200}
+              height={53}
+              sizeContext="thumbnail"
+              sizes="200px"
+              className="siteHeader_logo"
+              objectFit="contain"
+              priority
+            />
+          ) : (
+            siteTitle
+          )}
         </a>
         <nav className="siteHeader_nav" aria-label="Primary">
           <ul className="siteHeader_navList">

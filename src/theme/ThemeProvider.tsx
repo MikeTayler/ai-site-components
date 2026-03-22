@@ -11,6 +11,14 @@ export interface ThemeContextValue {
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
+/** Single font face name or full CSS `font-family` list from brand.json. */
+function cssFontFamily(face: string): string {
+  const t = face.trim();
+  if (!t) return "system-ui, sans-serif";
+  if (t.includes(",")) return t;
+  return `'${t.replace(/'/g, "\\'")}', sans-serif`;
+}
+
 function brandToCssVariables(brand: BrandConfig): CSSProperties {
   const { colors, typography, borderRadius, spacing } = brand;
   const radii = BORDER_RADIUS_CSS[borderRadius];
@@ -25,8 +33,8 @@ function brandToCssVariables(brand: BrandConfig): CSSProperties {
     "--color-text": colors.text,
     "--color-text-light": colors.textLight,
 
-    "--font-heading": typography.headingFont,
-    "--font-body": typography.bodyFont,
+    "--font-heading": cssFontFamily(typography.headingFont),
+    "--font-body": cssFontFamily(typography.bodyFont),
     "--font-size-base": `${typography.baseSize}px`,
     "--type-scale": String(typography.scale),
 

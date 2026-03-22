@@ -78,11 +78,20 @@
 }
 
 .siteHeader_brand {
+  display: inline-flex;
+  align-items: center;
+  max-width: min(12rem, 40vw);
   font-family: var(--font-heading);
   font-size: calc(var(--font-size-base) * var(--type-scale));
   font-weight: 700;
   color: inherit;
   text-decoration: none;
+}
+
+.siteHeader_logo {
+  height: 2.25rem;
+  width: auto;
+  max-width: 100%;
 }
 
 .siteHeader_nav {
